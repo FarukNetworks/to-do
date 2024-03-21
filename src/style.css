@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: "Neuton", serif;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #3178c6aa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
+button:hover {
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* General styles */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Input styles */
+/* Input styles */
+input[type="text"] {
+  width: calc(100% - 30px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all .5s ease-in-out;
+  margin-bottom: 0;
+}
+
+input[type="text"]:not(:focus) {
+  box-shadow: 0px 0px 0px 1px #ccc;
+
+}
+
+/* Animation for expanding box-shadow on focus */
+input[type="text"]:focus,
+input[type="text"]:focus-visible {
+  outline: 0;
+  border-color: transparent;
+  box-shadow: 3px 3px 3px #6b73ff;
+
+}
+
+
+
+input[type="text"]::placeholder {
+  font-size: 16px;
+}
+
+.input-text-container {
+  position: relative;
+}
+
+label.input-placeholder {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(15px, -50%);
+  font-size: 16px;
+  transition: all .5s ease-in-out;
+}
+
+input[type="text"]:focus + label.input-placeholder {
+  font-size: 11px;
+  top: 0px;
+  background: #3b3b3b;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #6b73ff;
+}
+
+/* List styles */
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.list > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Checkbox styles */
+.list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.list label {
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+/* Checked checkbox styles */
+.list input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Remove button styles */
+.remove-button {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f;
+}
+
+
+/* Animation for scaling down when removing */
+.list div.remove {
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+/* Animation for scaling up when adding */
+.list div.add {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+
+/* Light color scheme */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #646cff;
+    --secondary-color: #535bf2;
+    --background-color: #f9f9f9;
+    --gradient-start: #fff;
+    --gradient-end: #f0f0f0;
+  }
+}
+
+/* Dark color scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #646cff;
+    --secondary-color: #535bf2;
+    --background-color: #242424;
+    --gradient-start: #333;
+    --gradient-end: #1a1a1a;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background: radial-gradient(circle, var(--gradient-start), var(--gradient-end));
+}
